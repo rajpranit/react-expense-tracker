@@ -24,9 +24,14 @@ const App = () => {
     },
   ];
 
+  const allExpendeDataHandler = (allExpenseData) =>{
+    console.log('All Data')
+    console.log(allExpenseData)
+  }
+
   return (
     <div>
-      <NewExpense/>
+      <NewExpense allExpenseData={allExpendeDataHandler} />
       <Expenses expense={expenses}/>
     </div>
   );
