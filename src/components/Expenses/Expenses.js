@@ -12,7 +12,7 @@ function Expenses(props) {
     setFilterDate(filterDate);
   };
 
-  const filteredDate = props.expense.filter((ex) => {
+  const filteredExpense = props.expense.filter((ex) => {
     return ex.date.getFullYear().toString() === filterDate;
   });
 
@@ -25,8 +25,8 @@ function Expenses(props) {
           selectedYear={filterDate}
           onFilterDate={ExpenseFilterDate}
         />
-        <ExpensesChart expenses={filteredDate}/>
-        <ExpensesList item={filteredDate}/>
+        <ExpensesChart expenses={filteredExpense}/>
+        <ExpensesList item={filteredExpense}/>
       </Card>
     </>
   );

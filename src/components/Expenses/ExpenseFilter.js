@@ -7,7 +7,6 @@ const ExpenseFilter = (props) =>{
     const onfilterDate = (event) =>{
 
         props.onFilterDate(event.target.value)
-        console.log(event.target.value)
     }
 
     return (
